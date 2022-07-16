@@ -20,7 +20,16 @@
     </style>
   </head>
   <body x-data :class="$store.theme">
-    <div id="app"></div>
+    <div :class="$store.headerStyle">
+      <div x-if="showIcon">福クル</div>
+      <div x-if="!showIcon"></div>
+    </div>
+    <div id="app" :class="$store.appStyle"></div>
+    <div :class="$store.footerStyle">
+      <div :class="$store.flexCenter" style="flex: 1;">home</div>
+      <div :class="$store.flexCenter" style="flex: 1;">navi</div>
+      <div :class="$store.flexCenter" style="flex: 1;">review</div>
+    </div>
     <script type="module" src="./main.ts"></script>
   </body>
 </html>
