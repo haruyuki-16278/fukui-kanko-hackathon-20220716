@@ -29,6 +29,10 @@ export const headerStyle = style({
 })
 
 export const headerItem = style({
+  height: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   color: vars.color.primary,
   fontWeight: 'bold',
   fontSize: '32px'
