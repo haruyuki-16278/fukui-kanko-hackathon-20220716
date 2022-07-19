@@ -14,7 +14,5 @@ export const init = () => {
     center: L.latLng(35.943363, 136.200576),
     zoom: 12
   }
-  const map = L.map(mapElem, mapOptions)
-
-  return map
+  L.map(mapElem, mapOptions)
 }
