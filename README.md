@@ -1,4 +1,7 @@
-# Alpine-ts-boilerplate
+# fukui-kanko-hackathon-20220716
+## 福クル
+- [発表スライド](https://github.com/code4fukui/fukui-kanko-hackathon-20220716/blob/master/%E7%A6%8F%E3%82%AF%E3%83%AB.pdf)
+![ろご](src/public/logo.svg)
 
 ## 🚀 Quick Start
 ```shell
