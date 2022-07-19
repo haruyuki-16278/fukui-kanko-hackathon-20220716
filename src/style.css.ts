@@ -9,12 +9,13 @@ export const [themeClass, vars] = createTheme({
   },
   constant: {
     headerHeight: '40px',
-    footerHeight: '40px'
+    footerHeight: '40px',
+    pageHeight: 'calc(100% - 80px)'
   }
 })
 
 export const appStyle = style({
-  height: 'calc(100% - 80px)',
+  height: vars.constant.pageHeight,
   width: '100%',
   background: vars.color.background
 })

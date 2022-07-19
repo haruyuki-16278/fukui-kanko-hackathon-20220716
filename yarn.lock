@@ -142,10 +142,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/geojson@npm:*, @types/geojson@npm:^7946.0.10":
+  version: 7946.0.10
+  resolution: "@types/geojson@npm:7946.0.10"
+  checksum: 12c407c2dc93ecb26c08af533ee732f1506a9b29456616ba7ba1d525df96206c28ddf44a528f6a5415d7d22893e9d967420940a9c095ee5e539c1eba5fefc1f4
+  languageName: node
+  linkType: hard
+
 "@types/json-schema@npm:^7.0.9":
   version: 7.0.11
   resolution: "@types/json-schema@npm:7.0.11"
   checksum: 527bddfe62db9012fccd7627794bd4c71beb77601861055d87e3ee464f2217c85fca7a4b56ae677478367bbd248dbde13553312b7d4dbc702a2f2bbf60c4018d
+  languageName: node
+  linkType: hard
+
+"@types/leaflet@npm:^1.7.11":
+  version: 1.7.11
+  resolution: "@types/leaflet@npm:1.7.11"
+  dependencies:
+    "@types/geojson": "*"
+  checksum: 6613dbc91f174545ed39183a8564a344152f1884f02ab4dbc002b6bd4816d8525b5247e62217694763daf727ca5e589f40144dc809edb7194064e6bdc2f4369a
   languageName: node
   linkType: hard
 
@@ -432,12 +448,15 @@ __metadata:
   resolution: "alpine-ts-boilerplate@workspace:."
   dependencies:
     "@types/alpinejs": ^3.7.0
+    "@types/geojson": ^7946.0.10
+    "@types/leaflet": ^1.7.11
     "@typescript-eslint/eslint-plugin": latest
     "@typescript-eslint/parser": latest
     "@vanilla-extract/css": ^1.7.2
     "@vanilla-extract/vite-plugin": ^3.2.1
     alpinejs: ^3.10.2
     eslint: ^8.19.0
+    leaflet: ^1.8.0
     typescript: ^4.6.4
     vite: ^3.0.0
     vitest: ^0.18.0
@@ -1622,6 +1641,13 @@ __metadata:
   version: 1.0.1
   resolution: "json-stable-stringify-without-jsonify@npm:1.0.1"
   checksum: cff44156ddce9c67c44386ad5cddf91925fe06b1d217f2da9c4910d01f358c6e3989c4d5a02683c7a5667f9727ff05831f7aa8ae66c8ff691c556f0884d49215
+  languageName: node
+  linkType: hard
+
+"leaflet@npm:^1.8.0":
+  version: 1.8.0
+  resolution: "leaflet@npm:1.8.0"
+  checksum: 4a27895d4253844f2f13f94cbc52a2030b10833cdf553085d931b834745236a8d2a38844a01eb968cc109eb43268bfadb97aad85b51deffb17b6ccd106542e00
   languageName: node
   linkType: hard
 

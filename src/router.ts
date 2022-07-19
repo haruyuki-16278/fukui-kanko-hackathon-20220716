@@ -16,17 +16,17 @@ async function onRouteChange() {
 async function loadRoute(appElement: HTMLElement) {
   switch (window.location.hash) {
     case '#navi':
-      page2Init()
       appElement.innerHTML = await fetch('./pages/navi/navi.html').then(template => template.text())
+      page2Init()
       break
     case '#review':
-      reviewInit()
       appElement.innerHTML = await fetch('./pages/review/review.html').then(template => template.text())
+      reviewInit()
       break
     case '#home':
     default:
-      page1Init()
       appElement.innerHTML = await fetch('./pages/home/home.html').then(template => template.text())
+      page1Init()
       break
   }
 }
