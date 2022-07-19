@@ -5,7 +5,8 @@ export const [themeClass, vars] = createTheme({
     primary: '#28478a',
     secondary: '#0090c9',
     accent: '#376167',
-    background: '#ffffff'
+    background: '#ffffff',
+    border: '#b0c4de'
   },
   constant: {
     headerHeight: '40px',
@@ -26,7 +27,7 @@ export const headerStyle = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  borderBottom: '1px solid gray'
+  borderBottom: `1px solid ${vars.color.border}`
 })
 
 export const headerItem = style({
@@ -45,7 +46,7 @@ export const footerStyle = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  borderTop: '1px solid gray'
+  borderTop: `1px solid ${vars.color.border}`
 })
 
 export const footerItem = style({
