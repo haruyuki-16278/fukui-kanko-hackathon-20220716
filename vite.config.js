@@ -3,5 +3,10 @@ import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 
 export default defineConfig({
   root: 'src',
-  plugins: [vanillaExtractPlugin()]
+  build: {
+    outDir: '../dist'
+  },
+  plugins: [
+    vanillaExtractPlugin()
+  ]
 })

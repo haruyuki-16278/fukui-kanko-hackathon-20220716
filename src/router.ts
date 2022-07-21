@@ -1,8 +1,9 @@
+/* eslint-disable indent */
 // 参考: https://github.com/melnikaite/alpine-router
 
-import { init as page1Init } from './pages/home/home'
-import { init as page2Init } from './pages/navi/navi'
-import { init as reviewInit } from './pages/review/review'
+import { init as timelineInit } from './pages/timeline/timeline'
+import { init as mapInit } from './pages/map/map'
+import { init as mypageInit } from './pages/mypage/mypage'
 
 window.addEventListener('hashchange', onRouteChange)
 onRouteChange()
@@ -15,18 +16,21 @@ async function onRouteChange() {
 
 async function loadRoute(appElement: HTMLElement) {
   switch (window.location.hash) {
-    case '#navi':
-      page2Init()
-      appElement.innerHTML = await fetch('./pages/navi/navi.html').then(template => template.text())
+    case '#map':
+      appElement.innerHTML = await fetch(new URL('./pages/map/map.html', import.meta.url).href)
+                                    .then(template => template.text())
+      mapInit()
       break
-    case '#review':
-      reviewInit()
-      appElement.innerHTML = await fetch('./pages/review/review.html').then(template => template.text())
+    case '#mypage':
+      appElement.innerHTML = await fetch(new URL('./pages/mypage/mypage.html', import.meta.url).href)
+                                    .then(template => template.text())
+      mypageInit()
       break
-    case '#home':
+    case '#timeline':
     default:
-      page1Init()
-      appElement.innerHTML = await fetch('./pages/home/home.html').then(template => template.text())
+      appElement.innerHTML = await fetch(new URL('./pages/timeline/timeline.html', import.meta.url).href)
+                                    .then(template => template.text())
+      timelineInit()
       break
   }
 }

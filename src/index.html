@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./router.ts" defer></script>
-    <title>Alpine ts boilerplate</title>
+    <title>福クル</title>
     <style>
       /* 全体に当てるスタイルなのでここで書いてしまう */
       html, body {
@@ -18,19 +18,55 @@
         box-sizing: border-box;
       }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
   </head>
   <body x-data :class="$store.theme">
     <div :class="$store.headerStyle">
-      <div :class="$store.headerItem" x-if="showIcon">
-        <img src="./public/logo.svg" alt="福クル" style="height: 32px;"/>
+      <div :class="$store.headerItem" x-show="$store.showIcon">
+        <img src="/logo.svg" alt="福クル" style="height: 32px;"/>
       </div>
-      <div :class="$store.headerItem" x-if="!showIcon" x-text="$store."></div>
+      <div :class="$store.headerItem" x-show="!$store.showIcon" x-text="$store."></div>
     </div>
     <div id="app" :class="$store.appStyle"></div>
     <div :class="$store.footerStyle">
-      <a :class="$store.footerItem" style="flex: 1;" href="#home">home</a>
-      <a :class="$store.footerItem" style="flex: 1;" href="#navi">navi</a>
-      <a :class="$store.footerItem" style="flex: 1;" href="#review">review</a>
+      <a :class="$store.footerItem" style="flex: 1;" href="#timeline">
+        <svg :class="$store.currentPage === 'timeline'
+            ? `${$store.activeStyle} ${$store.footerIcon}`
+            : `${$store.disabledStyle} ${$store.footerIcon}`">
+          <use xlink:href="/icons/cycle.svg#cycle"/>
+        </svg>
+        <div :class="$store.currentPage === 'timeline'
+            ? $store.activeStyle
+            : $store.disabledStyle">
+          タイムライン
+        </div>
+      </a>
+      <a :class="$store.footerItem" style="flex: 1;" href="#map">
+        <svg :class="$store.currentPage === 'map'
+            ? `${$store.activeStyle} ${$store.footerIcon}`
+            : `${$store.disabledStyle} ${$store.footerIcon}`">
+          <use xlink:href="/icons/map.svg#map"/>
+        </svg>
+        <div :class="$store.currentPage === 'map'
+            ? $store.activeStyle
+            : $store.disabledStyle">
+          マップ
+        </div>
+      </a>
+      <a :class="$store.footerItem" style="flex: 1;" href="#mypage">
+        <svg :class="$store.currentPage === 'mypage'
+            ? `${$store.activeStyle} ${$store.footerIcon}`
+            : `${$store.disabledStyle} ${$store.footerIcon}`">
+          <use xlink:href="/icons/human-with-helmet.svg#human-with-helmet"/>
+        </svg>
+        <div :class="$store.currentPage === 'mypage'
+            ? $store.activeStyle
+            : $store.disabledStyle">
+          マイページ
+        </div>
+      </a>
     </div>
     <script type="module" src="./main.ts"></script>
   </body>

@@ -5,16 +5,19 @@ export const [themeClass, vars] = createTheme({
     primary: '#28478a',
     secondary: '#0090c9',
     accent: '#376167',
-    background: '#ffffff'
+    background: '#ffffff',
+    border: '#b0c4de',
+    disabled: '#bfbfbf'
   },
   constant: {
-    headerHeight: '40px',
-    footerHeight: '40px'
+    headerHeight: '44px',
+    footerHeight: '44px',
+    pageHeight: 'calc(100% - 88px)'
   }
 })
 
 export const appStyle = style({
-  height: 'calc(100% - 80px)',
+  height: vars.constant.pageHeight,
   width: '100%',
   background: vars.color.background
 })
@@ -25,7 +28,7 @@ export const headerStyle = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  borderBottom: '1px solid gray'
+  borderBottom: `1px solid ${vars.color.border}`
 })
 
 export const headerItem = style({
@@ -44,18 +47,24 @@ export const footerStyle = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  borderTop: '1px solid gray'
+  borderTop: `1px solid ${vars.color.border}`
 })
 
 export const footerItem = style({
   height: '100%',
   width: '100%',
   display: 'flex',
+  flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
   color: 'black !important',
-  fontWeight: 'bold',
+  fontSize: '10px',
   textDecoration: 'none'
+})
+
+export const footerIcon = style({
+  height: 24,
+  width: 24
 })
 
 export const flexCenter = style({
@@ -63,4 +72,16 @@ export const flexCenter = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center'
+})
+
+export const activeStyle = style({
+  color: vars.color.primary,
+  fill: vars.color.primary,
+  fontWeight: 'bold'
+})
+
+export const disabledStyle = style({
+  color: vars.color.disabled,
+  fill: vars.color.disabled,
+  fontWeight: 'normal'
 })
