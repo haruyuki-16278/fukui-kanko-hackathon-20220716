@@ -1,5 +1,5 @@
 import Alpine from 'alpinejs'
-import L, { MapOptions } from 'leaflet'
+import L from 'leaflet'
 import { naviStyle } from './navi.css'
 
 export const init = () => {
