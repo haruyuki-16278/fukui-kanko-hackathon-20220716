@@ -1,9 +1,9 @@
 import Alpine from 'alpinejs'
 
 export const init = () => {
-  console.log('page1 called')
+  console.log('timeline called')
   Alpine.store('currentPage', 'timeline')
-  Alpine.data('page1', () => ({
-    title: 'Hello, page1'
+  Alpine.data('timeline', () => ({
+    title: 'Hello, timeline'
   }))
 }

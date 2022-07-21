@@ -3,10 +3,10 @@ import L from 'leaflet'
 import { mapStyle } from './map.css'
 
 export const init = () => {
-  console.log('navi called')
+  console.log('map called')
   Alpine.store('currentPage', 'map')
-  Alpine.data('navi', () => ({
-    title: 'Hello, navi',
+  Alpine.data('map', () => ({
+    title: 'Hello, map',
     style: mapStyle
   }))
 

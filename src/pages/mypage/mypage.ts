@@ -1,9 +1,9 @@
 import Alpine from 'alpinejs'
 
 export const init = () => {
-  console.log('review called')
+  console.log('mypage called')
   Alpine.store('currentPage', 'mypage')
-  Alpine.data('review', () => ({
-    title: 'Hello, review'
+  Alpine.data('mypage', () => ({
+    title: 'Hello, mypage'
   }))
 }
