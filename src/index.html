@@ -24,10 +24,10 @@
   </head>
   <body x-data :class="$store.theme">
     <div :class="$store.headerStyle">
-      <div :class="$store.headerItem" x-if="showIcon">
-        <img src="./public/logo.svg" alt="福クル" style="height: 32px;"/>
+      <div :class="$store.headerItem" x-show="$store.showIcon">
+        <img src="/logo.svg" alt="福クル" style="height: 32px;"/>
       </div>
-      <div :class="$store.headerItem" x-if="!showIcon" x-text="$store."></div>
+      <div :class="$store.headerItem" x-show="!$store.showIcon" x-text="$store."></div>
     </div>
     <div id="app" :class="$store.appStyle"></div>
     <div :class="$store.footerStyle">
