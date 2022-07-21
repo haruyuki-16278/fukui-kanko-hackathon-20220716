@@ -1,13 +1,13 @@
 import Alpine from 'alpinejs'
 import L from 'leaflet'
-import { naviStyle } from './navi.css'
+import { mapStyle } from './map.css'
 
 export const init = () => {
   console.log('navi called')
   Alpine.store('currentPage', 'map')
   Alpine.data('navi', () => ({
     title: 'Hello, navi',
-    style: naviStyle
+    style: mapStyle
   }))
 
   const mapElem = document.getElementById('map') as HTMLElement

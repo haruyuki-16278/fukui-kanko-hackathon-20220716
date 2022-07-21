@@ -31,7 +31,7 @@
     </div>
     <div id="app" :class="$store.appStyle"></div>
     <div :class="$store.footerStyle">
-      <a :class="$store.footerItem" style="flex: 1;" href="#home">
+      <a :class="$store.footerItem" style="flex: 1;" href="#timeline">
         <svg :class="$store.currentPage === 'timeline'
             ? `${$store.activeStyle} ${$store.footerIcon}`
             : `${$store.disabledStyle} ${$store.footerIcon}`">
@@ -43,7 +43,7 @@
           タイムライン
         </div>
       </a>
-      <a :class="$store.footerItem" style="flex: 1;" href="#navi">
+      <a :class="$store.footerItem" style="flex: 1;" href="#map">
         <svg :class="$store.currentPage === 'map'
             ? `${$store.activeStyle} ${$store.footerIcon}`
             : `${$store.disabledStyle} ${$store.footerIcon}`">
@@ -55,7 +55,7 @@
           マップ
         </div>
       </a>
-      <a :class="$store.footerItem" style="flex: 1;" href="#review">
+      <a :class="$store.footerItem" style="flex: 1;" href="#mypage">
         <svg :class="$store.currentPage === 'mypage'
             ? `${$store.activeStyle} ${$store.footerIcon}`
             : `${$store.disabledStyle} ${$store.footerIcon}`">
