@@ -4,6 +4,7 @@ import { naviStyle } from './navi.css'
 
 export const init = () => {
   console.log('navi called')
+  Alpine.store('currentPage', 'map')
   Alpine.data('navi', () => ({
     title: 'Hello, navi',
     style: naviStyle

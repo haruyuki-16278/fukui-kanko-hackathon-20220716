@@ -31,9 +31,42 @@
     </div>
     <div id="app" :class="$store.appStyle"></div>
     <div :class="$store.footerStyle">
-      <a :class="$store.footerItem" style="flex: 1;" href="#home">home</a>
-      <a :class="$store.footerItem" style="flex: 1;" href="#navi">navi</a>
-      <a :class="$store.footerItem" style="flex: 1;" href="#review">review</a>
+      <a :class="$store.footerItem" style="flex: 1;" href="#home">
+        <svg :class="$store.currentPage === 'timeline'
+            ? `${$store.activeStyle} ${$store.footerIcon}`
+            : `${$store.disabledStyle} ${$store.footerIcon}`">
+          <use xlink:href="/icons/cycle.svg#cycle"/>
+        </svg>
+        <div :class="$store.currentPage === 'timeline'
+            ? $store.activeStyle
+            : $store.disabledStyle">
+          タイムライン
+        </div>
+      </a>
+      <a :class="$store.footerItem" style="flex: 1;" href="#navi">
+        <svg :class="$store.currentPage === 'map'
+            ? `${$store.activeStyle} ${$store.footerIcon}`
+            : `${$store.disabledStyle} ${$store.footerIcon}`">
+          <use xlink:href="/icons/map.svg#map"/>
+        </svg>
+        <div :class="$store.currentPage === 'map'
+            ? $store.activeStyle
+            : $store.disabledStyle">
+          マップ
+        </div>
+      </a>
+      <a :class="$store.footerItem" style="flex: 1;" href="#review">
+        <svg :class="$store.currentPage === 'mypage'
+            ? `${$store.activeStyle} ${$store.footerIcon}`
+            : `${$store.disabledStyle} ${$store.footerIcon}`">
+          <use xlink:href="/icons/human-with-helmet.svg#human-with-helmet"/>
+        </svg>
+        <div :class="$store.currentPage === 'mypage'
+            ? $store.activeStyle
+            : $store.disabledStyle">
+          マイページ
+        </div>
+      </a>
     </div>
     <script type="module" src="./main.ts"></script>
   </body>
