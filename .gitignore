@@ -13,8 +13,8 @@ dist-ssr
 *.local
 
 # yarn v3
-.yarn/*
-!.yarn/releases
+frontend/.yarn/*
+!frontend/.yarn/releases
 
 # Editor directories and files
 .vscode/*
