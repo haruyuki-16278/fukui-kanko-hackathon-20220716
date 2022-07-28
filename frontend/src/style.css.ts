@@ -5,7 +5,8 @@ export const [themeClass, vars] = createTheme({
     primary: '#28478a',
     secondary: '#0090c9',
     accent: '#376167',
-    background: '#ffffff',
+    surface: '#ffffff',
+    background: '#dfdfdf',
     border: '#b0c4de',
     disabled: '#bfbfbf'
   },
